@@ -17,7 +17,7 @@ public class transacciones
     public static String correo="correo";
 
     //consultas SQL
-    public static String CreateTBpersonas = "CREATE TABLE personas(id INTEGER PRIMARY KEY AUTOINCREMENT)"+
-            "nombres TEXT, apellidos TEXT, edad INTEGER, correo TEXT";
+    public static String CreateTBpersonas = "CREATE TABLE personas (id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "nombres TEXT, apellidos TEXT, edad INTEGER, correo TEXT )";
     public static String DropTBpersonas = "DROP  TABLE IF EXISTS personas";
 }
