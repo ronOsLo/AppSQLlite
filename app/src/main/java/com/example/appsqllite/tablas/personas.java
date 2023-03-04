@@ -9,5 +9,12 @@ public class personas
     private String correo;
 
 
+    public personas(Integer id, String nombres, String apellidos, Integer edad, String correo) {
+        this.id = id;
+        Nombres = nombres;
+        Apellidos = apellidos;
+        this.edad = edad;
+        this.correo = correo;
+    }
 
 }
