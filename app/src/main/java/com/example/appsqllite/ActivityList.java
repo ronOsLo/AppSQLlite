@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.appsqllite.configuracion.SQLliteConexion;
 import com.example.appsqllite.configuracion.transacciones;
@@ -30,6 +33,15 @@ public class ActivityList extends AppCompatActivity {
 
         ArrayAdapter adp = new ArrayAdapter(this, android.R.layout.simple_list_item_1,arregloPersonas);
         listaPersonas.setAdapter(adp);
+
+        listaPersonas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                Toast.makeText(getApplicationContext(),lista.get(i).getCorreo().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     private void obtenerListaPersonas()
