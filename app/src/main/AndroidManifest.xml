@@ -12,6 +12,12 @@
         android:theme="@style/Theme.AppSQLlite"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityList"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
